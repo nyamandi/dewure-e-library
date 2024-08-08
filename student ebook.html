@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student ebook </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="src/MagazinePic-07-2.3.001-bigpicture_07_3.jpg">
+    <header> <h2 class= "logo">Dewure library </h2>
+        <nav class="navigation"> 
+         <a href="Home.html">Home </a> 
+         <a href="about.html">About </a> 
+         <a href="contact us .html">Contact us</a> 
+         <a href="https://app.vectorshift.ai/chatbots/deployed/66b3496c7b26aa0dd872d2cd">Ask chatbot</a>
+        </nav> 
+    </header>   
+<body>
+    <div class="wrapper7">
+        <div class="form-box login">
+
+
+            <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for books..." class=" search">
+            <script>
+                function searchFunction() {
+                  var input, filter, ul, li, a, i, txtValue;
+                  input = document.getElementById('searchInput');
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById('searchList');
+                  li = ul.getElementsByTagName('li');
+                  
+                  for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName('a')[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                      li[i].style.display = '';
+                    } else {
+                      li[i].style.display = 'higlight';
+                    }
+                  }
+                }
+              </script>
+              
+            
+            
+            <div> <button type="close" class="btnE">E-Books</button></div>
+            
+           
+                 
+
+            <ul class="textbooks" id="searchList">
+              <li>  <a href="src/04. DYNAMICS.pdf" target="_blank">  PHYSICS DYNAMICS</a></li> 
+                <hr>
+                <li><a href="src/03. KINEMATICS.pdf" target="_blank"> PHYSICS KINEMATICS</a></li>
+                
+                <hr>
+                <li> <a href="src/AS and AL Computer Science Coursebook by Sylvia Langfield and Dave Duddell.pdf" target="_blank"> AS and AL Computer Science Coursebook </a></li>
+               
+                <hr>
+                <li><a href="src/Briggs__A_level_chemistry_125905.pdf" target="_blank">  Briggs__A_level_chemistry</a></li>
+                
+                <hr>
+                <li> <a href="src/A LEVEL ORGANIC CHEMISTRY NOTES.pdf" target="_blank">A LEVEL ORGANIC CHEMISTRY NOTES</a></li>
+               
+                <hr>
+               
+            </ul>
+               
+         
+
+<style>
+    hr{
+        border: 0;
+        height: 1px;
+        width: 900px;
+        background:rgba(231, 148, 176, 0.6260) ;
+    }
+   
+</style>
+        </div>
+        
+    </div>
+</body>
+</html>

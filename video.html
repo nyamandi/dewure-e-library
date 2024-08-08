@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="src/MagazinePic-07-2.3.001-bigpicture_07_3.jpg">
+    <header> <h2 class= "logo">Dewure library </h2>
+        <nav class="navigation"> 
+         <a href="Home.html">Home </a> 
+         <a href="about.html">About </a> 
+         <a href="contact us .html">Contact us</a> 
+         <a href="https://app.vectorshift.ai/chatbots/deployed/66b3496c7b26aa0dd872d2cd">Ask chatbot</a>
+        </nav> 
+    </header>   
+<body>
+<div class="wrapper4">
+    <div> <button type="close" class="btnvi">Video</button></div>
+        <div   class="form-box">
+            <input type="file" id="uploadInput" accept="video/*" class="vi" >
+            <button  onclick="uploadVideoo()"  class="btnan"> Upload</button>
+        <ul class="videoss">
+            <li>
+                <a href="src/Bubble Sort 1- Algorithm.mp4" target="_blank"> Bubble Sort 1- Algorithm</a>
+                <button onclick="deleteVideo(this)"> delete</button>
+            </li>
+            <br>
+            <hr>
+            <br>
+
+            <li>
+
+                <a href="src/Algorithms Lesson 5 Linear and Binary Searching.mp4" target="_blank"> Linear and Binary Searching</a>
+                <button onclick="deleteVideo(this)"> delete</button>
+            </li>
+            <br>
+            <hr>
+            <br>
+            <li>
+                <a href="src/Bubble Sort 2- Pseudocode and Enhancements.mp4" target="_blank">Bubble Sort 2- Pseudocode and Enhancements</a>
+                <button onclick="deleteVideo(this)"> delete</button>
+                
+            </li>
+            <br>
+            <hr>
+            <br>
+            <li>
+                <a href="src/1  VB.Net tutorial Binary Search (APC Chita).mp4" target="_blank"> VB.Net tutorial Binary Search (APC Chita)</a>
+                <button onclick="deleteVideo(this)"> delete</button>
+            </li>
+            <br>
+            <hr>
+            <br>
+            <li>
+                <a href="src/Binary Search - Iterative Implementation and common errors (1).mp4" target="_blank"> Binary Search - Iterative Implementation and common errors</a>
+                <button onclick="deleteVideo(this)"> delete</button>
+            </li>
+        </ul>
+       <style>
+        
+        hr {
+                    border: 0;
+                    height: 1px;
+                    width: 800px;
+                    background:rgba(231, 148, 176, 0.6260) ;
+                }
+       </style>
+       <script>
+        function 
+        deleteVideo(button) {
+            var listItem =button.parentNode; 
+            listItem.remove();            // removing the  video link 
+            alert('deleted successfully');
+        }
+    </script>    
+        <Script>
+            function uploadVideoo() { // uploading the file 
+                var fileInput = document.getElementById('uploadInput');
+                var file =fileInput.files[0]
+                if (file)  { // code to handle the uploaded file 
+                    var fileURL = URL.createObjectURL(file);
+                    var link = document.createElement('a');
+                    link.href= fileURL;
+                    link.target='_blank';
+                    link.textContent= 'view pdf';
+    
+                    
+                    WakeLockSentinel
+                    document.body.appendChild(link);
+                    alert(
+                        'file uploaded '
+                    );
+                }
+                else{
+                    alert(' please select file to upload.');
+                }
+            }
+         </Script>
+     </div>
+</div>
+</body>
+</html>

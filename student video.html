@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>student video </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="src/MagazinePic-07-2.3.001-bigpicture_07_3.jpg">
+    <header> <h2 class= "logo">Dewure library </h2>
+        <nav class="navigation"> 
+         <a href="Home.html">Home </a> 
+         <a href="about.html">About </a> 
+         <a href="contact us .html">Contact us</a> 
+         <a href="https://app.vectorshift.ai/chatbots/deployed/66b3496c7b26aa0dd872d2cd">Ask chatbot</a>
+         
+        </nav> 
+    </header> 
+      
+<body>
+    <div class="wrapper7">
+        <div class="form-box login">
+            <script>
+                function searchFunction() {
+                  var input, filter, ul, li, a, i, txtValue;
+                  input = document.getElementById('searchInput');
+                  filter = input.value.toUpperCase();
+                  ul = document.getElementById('searchList');
+                  li = ul.getElementsByTagName('li');
+                  
+                  for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName('a')[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                      li[i].style.display = '';
+                    } else {
+                      li[i].style.display = 'none';
+                    }
+                  }
+                }
+              </script>
+              
+            
+            <div> <button type="close" class="btnE">Videos</button></div>
+            
+             <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for books..." class=" search">
+            <ul class="vids" id="searchList">
+            <li> <video controls width="300" height="150"  > <source src="src/1  VB.Net tutorial Binary Search (APC Chita).mp4" type=" video/mp4"> </video>
+                <a href="src/1  VB.Net tutorial Binary Search (APC Chita).mp4" target="_blank"> VB.Net tutorial Binary Search (APC Chita)</a>
+            </li>
+            <hr>
+            <br>
+            <li> <video controls width="300"   height="150"> <source src="src/Algorithms Lesson 5 Linear and Binary Searching.mp4" type=" video/mp4"> </video>
+                <a href="src/1  VB.Net tutorial Binary Search (APC Chita).mp4" target="_blank"> Algorithms Lesson 5 Linear and Binary Searching</a>
+            </li>
+            <hr>
+            <br>
+            <li> <video controls width="300" height="150" > <source src="src/Algorithms_Binary_Search.mp4.mp4" type=" video/mp4"> </video>
+                <a href="src/1  VB.Net tutorial Binary Search (APC Chita).mp4" target="_blank"> Algorithms_Binary_Search</a>
+            </li>
+            <hr>
+            <br>
+            <li> <video controls width="300" height="150" > <source src="src/Bubble Sort 1- Algorithm.mp4" type=" video/mp4"> </video>
+                <a href="src/1  VB.Net tutorial Binary Search (APC Chita).mp4" target="_blank"> Bubble Sort 1- Algorithm</a>
+            </li>
+            <hr>
+            <br>
+            
+        </ul> 
+ <hr>
+ <style>
+     hr {
+                    border: 0;
+                    height: 2px;
+                    width: 800px;
+                    background:rgba(231, 148, 176, 0.6260) ;
+                }
+ </style>
+        </div>
+    </div>
+</body>
+</html>

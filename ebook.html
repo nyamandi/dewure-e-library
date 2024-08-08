@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Book</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="src/MagazinePic-07-2.3.001-bigpicture_07_3.jpg">
+    <header> <h2 class= "logo">Dewure library </h2>
+        <nav class="navigation"> 
+         <a href="Home.html">Home </a> 
+         <a href="about.html">About </a> 
+         <a href="contact us .html">Contact us</a>
+         <a href="https://app.vectorshift.ai/chatbots/deployed/66b3496c7b26aa0dd872d2cd">Ask chatbot</a>
+        
+        </nav> 
+    </header>   
+<body>
+    <div class="wrapper2">
+        <div class="form-box login">
+           
+           
+            <div> <button type="close" class="btnE">E-Books</button></div>
+            
+            <input type="file" id="uploadInput" accept=".pdf" class="file" >
+            <button  onclick="uploadPDF()"  class="btnan"> Upload</button>
+            
+            <ul class="textbooks">
+                <li> 
+                    <a href="src/04. DYNAMICS.pdf" target="_blank">  PHYSICS DYNAMICS </a>
+                    <button onclick="deleteItem (this)" class="btndelete"> delete</button>
+                </li>
+                <hr>
+                <li>
+                    <a href="src/04. DYNAMICS.pdf" target="_blank">  PHYSICS DYNAMICS</a>
+                        <button onclick="deleteItem( this)" class="btndelete">delete </button>  
+                </li>
+                <hr >
+                <li>
+                    <a href="src/03. KINEMATICS.pdf" target="_blank"> PHYSICS KINEMATICS </a> <button onclick="deleteLink()" class="btndelete">delete </button>
+                </li>
+                <hr>
+                <li>
+                    <a href="src/AS and AL Computer Science Coursebook by Sylvia Langfield and Dave Duddell.pdf" target="_blank"> AS and AL Computer Science Coursebook  </a>
+                        <button onclick="deleteItem( this)" class="btndelete">delete </button>
+                   
+                </li>
+                 <hr>
+                <li><a href="src/Briggs__A_level_chemistry_125905.pdf" target="_blank">  Briggs__A_level_chemistry</a> <button onclick="deleteItem( this)" class="btndelete">delete </button>
+                   
+                </li>
+                <hr>
+                <li><a href="src/A LEVEL ORGANIC CHEMISTRY NOTES.pdf" target="_blank">A LEVEL ORGANIC CHEMISTRY NOTES</a><button onclick="deleteItem( this)" class="btndelete">delete </button>
+                    
+                </li>
+                <hr>
+            </ul>
+            <style>
+    
+                hr {
+                    border: 0;
+                    height: 1px;
+                    width: 800px;
+                    background:rgba(231, 148, 176, 0.6260) ;
+                }
+            </style>
+        
+            <script>
+                function 
+                deleteItem(button) {
+                    var listItem =button.parentNode; 
+                    listItem.remove();            // removing the pdf link 
+                    alert('deleted successfully');
+                }
+            </script>     
+    <Script>
+        function uploadPDF() { // uploading the file 
+            var fileInput = document.getElementById('uploadInput');
+            var file =fileInput.files[0]
+            if (file)  { // code to handle the uploaded file 
+                var fileURL = URL.createObjectURL(file);
+                var link = document.createElement('a');
+                link.href= fileURL;
+                link.target='_blank';
+                link.textContent= 'view pdf';
+
+                
+                WakeLockSentinel
+                document.body.appendChild(link);
+                alert(
+                    'file uploaded '
+                );
+            }
+            else{
+                alert(' please select file to upload.');
+            }
+        }
+    </Script>
+        </div>
+    </div>
+</body>
+</html>
